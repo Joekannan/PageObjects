@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="methods" name="Failed suite [ParallelTest-Methods]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="methods" name="Test(failed)">
+    <classes>
+      <class name="testNGMethods.ParallelTestByMethods">
+        <methods>
+          <include name="verifyLoginAndLogout"/>
+          <include name="registration"/>
+        </methods>
+      </class> <!-- testNGMethods.ParallelTestByMethods -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [ParallelTest-Methods] -->

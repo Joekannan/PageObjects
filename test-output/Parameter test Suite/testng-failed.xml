@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Parameter test Suite]">
+  <parameter name="test-three-param" value="test three parameter"/>
+  <parameter name="suite-param" value="overiding suite parameter"/>
+  <parameter name="test-two-param" value="Test two parameter"/>
+  <test name="Parameter Test one">
+    <classes>
+      <class name="testNGMethods.ParameterSuiteLevel">
+        <methods>
+          <include name="prameterTestOne"/>
+        </methods>
+      </class> <!-- testNGMethods.ParameterSuiteLevel -->
+    </classes>
+  </test> <!-- Parameter Test one -->
+  <test name="Parameter Test two">
+    <parameter name="test-two-param" value="Test two parameter"/>
+    <classes>
+      <class name="testNGMethods.ParameterSuiteLevel">
+        <methods>
+          <include name="prameterTestTwo"/>
+        </methods>
+      </class> <!-- testNGMethods.ParameterSuiteLevel -->
+    </classes>
+  </test> <!-- Parameter Test two -->
+  <test name="Parameter Test three">
+    <parameter name="test-three-param" value="test three parameter"/>
+    <parameter name="suite-param" value="overiding suite parameter"/>
+    <classes>
+      <class name="testNGMethods.ParameterSuiteLevel">
+        <methods>
+          <include name="prameterTestThree"/>
+        </methods>
+      </class> <!-- testNGMethods.ParameterSuiteLevel -->
+    </classes>
+  </test> <!-- Parameter Test three -->
+</suite> <!-- Failed suite [Parameter test Suite] -->
